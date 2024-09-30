@@ -1,0 +1,162 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Change from center to flex-start */
+    height: 100vh;
+    padding-top: 50px; /* Add padding at the top */
+}
+
+
+/* Container styling */
+.container {
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+}
+
+/* Heading style */
+.container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2a9d8f;
+}
+
+/* Search bar styling */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#countryInput {
+    padding: 10px;
+    font-size: 1rem;
+    width: 70%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#countryInput:focus {
+    border-color: #2a9d8f;
+    box-shadow: 0 0 8px rgba(42, 157, 143, 0.2);
+}
+
+#searchBtn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #2a9d8f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#searchBtn:hover {
+    background-color: #21867a;
+}
+
+/* Message area */
+.message p {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+/* Cards container for universities */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* University card styling */
+.university-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(50% - 20px);
+    max-width: 350px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.university-card:hover {
+    transform: translateY(-5px);
+}
+
+.university-card h2 {
+    font-size: 1.5rem;
+    color: #2a9d8f;
+    margin-bottom: 10px;
+}
+
+.university-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.university-card a {
+    color: #e76f51;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.university-card a:hover {
+    color: #d1593b;
+}
+
+/* Go Back button */
+.go-back-btn {
+    background-color: #e63946;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.go-back-btn:hover {
+    background-color: #cc2f3c;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .university-card {
+        width: 100%;
+    }
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    #countryInput {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
